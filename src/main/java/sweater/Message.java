@@ -1,5 +1,5 @@
 package sweater;
-
+//jdbc:mysql://localhost/sweater?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +15,15 @@ public class Message {
     private String name;
 
     private String email;
+
+    public Message() {
+
+    }
+
+    public Message(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;

@@ -1,12 +1,24 @@
 <html>
 
 <body>
+<div>
+
+</div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Input name" />
+        <input type="text" name="email" placeholder="Input email" />
+        <button type="submit">Вставити</button>
+    </form>
 <div>Список повідмлень</div>
+<form method="post" action="filter">
+    <input type="text" name="filter"/>
+    <button type="submit">Знайти</button>
+</form>
 {{#messages}}
 <div>
-<b>{{id}}</b>
-<span>{{name}}</span>
-<i>{{email}}</i>
+    <b>{{id}}</b>
+    <b>{{name}}</b>
+    <b>{{email}}</b>
 </div>
 {{/messages}}
 </body>
