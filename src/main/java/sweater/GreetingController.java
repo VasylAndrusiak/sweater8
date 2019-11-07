@@ -37,14 +37,14 @@ public class GreetingController {
         model.put("messages", messages);
         return "main";
     }
-    /*@PostMapping ("filter")
+    @PostMapping ("filter")
     public String filter(@RequestParam String filter, Map<String, Object> model) {
 
-        List<Message> messages = messageRepo.findByTag(filter);
+        List<Message> messages = messageRepo.findByName(filter);
 
         model.put("messages", messages);
         return "main";
-    }*/
+    }
 }
 
 
