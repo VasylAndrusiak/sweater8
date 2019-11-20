@@ -1,4 +1,4 @@
-package sweater;
+package sweater.domain;
 //jdbc:mysql://localhost/sweater?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 
 import javax.persistence.Entity;
