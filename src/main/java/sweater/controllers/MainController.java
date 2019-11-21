@@ -1,10 +1,12 @@
 package sweater.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import sweater.domain.User;
 import sweater.repos.MessageRepo;
 import sweater.domain.Message;
 
@@ -27,8 +29,8 @@ public class MainController {
         return "main";
     }
     @PostMapping("/main")
-    public String add(@RequestParam String name, @RequestParam String email, Map<String, Object> model){
-        Message message = new Message(name, email);
+    public String add(@AuthenticationPrincipal User user, @RequestParam String name, @RequestParam String email, Map<String, Object> model){
+        Message message = new Message(name, email, user);
         messageRepo.save(message);
 
         Iterable <Message> messages = messageRepo.findAll();
