@@ -17,10 +17,10 @@
         <div class="form-group mt-3">
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="text" placeholder="Введіть повідомлення" />
+                    <input type="text" class="form-control" name="name" placeholder="Введіть повідомлення" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="name" placeholder="Name">
+                    <input type="text" class="form-control" name="email" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
